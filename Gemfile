@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.6'
+ruby '3.1.2'
+# old: 2.7.6
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'excon', '~> 0.85'
@@ -11,7 +12,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'jwt', '~> 2.2'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.6'
-gem 'rails', '~> 7.0.4'
+gem 'rails', '~> 7.1.3'
 gem 'rspotify', '~> 2.10'
 gem 'sass-rails', '>= 6'
 gem 'sidekiq', '~> 6.4'
@@ -42,4 +43,6 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
